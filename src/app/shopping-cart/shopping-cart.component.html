@@ -1,7 +1,8 @@
 <ul>
   <li *ngFor="let item of items">
     {{ item }}
-    <button [title]="'Delete ' + item">X</button>
+    <button [title]="'Delete ' + item"
+      (click)="deleteItem(item)">X</button>
   </li>
 </ul>
 

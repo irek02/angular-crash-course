@@ -18,4 +18,8 @@ export class ShoppingCartComponent implements OnInit {
     });
   }
 
+  deleteItem(deletedItem) {
+    this.items = this.items.filter(item => item !== deletedItem);
+  }
+
 }
