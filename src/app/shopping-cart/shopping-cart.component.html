@@ -1,10 +1,12 @@
-<ul>
+<ul class="uk-list">
   <li *ngFor="let item of items">
     {{ item }}
     <button [title]="'Delete ' + item"
       (click)="deleteItem(item)">X</button>
   </li>
 </ul>
+
+<hr>
 
 <div *ngIf="items.length > 1">
   <app-item-counter [items]="items"></app-item-counter>
