@@ -1,8 +1,7 @@
 <ul class="uk-list">
   <li *ngFor="let item of items">
-    {{ item }}
-    <button [title]="'Delete ' + item"
-      (click)="deleteItem(item)">X</button>
+    {{ item }} <button [title]="'Delete ' + item"
+      (click)="deleted(item)">X</button>
   </li>
 </ul>
 

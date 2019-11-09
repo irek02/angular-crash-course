@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../shopping-cart.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -10,15 +10,15 @@ export class ShoppingCartComponent implements OnInit {
 
   items = [];
 
-  constructor(private shoppingCartService: ShoppingCartService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.shoppingCartService.getItems().subscribe(res => {
+    this.dataService.getItems().subscribe(res => {
       this.items = res;
     });
   }
 
-  deleteItem(deletedItem) {
+  deleted(deletedItem) {
     this.items = this.items.filter(item => item !== deletedItem);
   }
 
